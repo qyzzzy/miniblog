@@ -1,0 +1,7 @@
+#.air.toml
+
+# 设置监视的文件变化
+[build]
+cmd = "go build -o _output/miniblog -v github.com/qylearn/miniblog/cmd/miniblog"
+bin = "_output/miniblog"
+

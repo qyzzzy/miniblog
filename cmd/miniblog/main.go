@@ -6,7 +6,7 @@
 package main
 
 import (
-	"github.com/mqylearn/miniblog/internal/miniblog"
+	"github.com/qylearn/miniblog/internal/miniblog"
 	_ "go.uber.org/automaxprocs"
 	"os"
 )

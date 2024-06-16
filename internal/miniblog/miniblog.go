@@ -14,7 +14,7 @@ func NewMiniBlogCommand() *cobra.Command {
 		//命令的详细描述
 		Long: `A good GO practical project,used to create user with basic information
 		Find more miniblog information at:
-		    https://github.com/qylearn/miniblog#readme`,
+		    https://github.com/qyzzzy/miniblog#readme`,
 		//命令出错时，不打印帮助信息。不需要打印帮助信息，设置为true可以保持命令出错时一眼就能看到错误信息
 		SilenceUsage: true,
 		//指定调用cmd.Execute()时，执行的RUN函数，函数执行失败会返回错误信息

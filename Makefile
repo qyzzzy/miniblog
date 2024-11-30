@@ -1,18 +1,22 @@
-#默认执行all目标
+# 默认执行 all 目标
 .DEFAULT_GOAL := all
 
-#定义Makefile all 伪目标，执行‘make’时，会默认执行all 伪目标
+# ==============================================================================
+# 定义 Makefile all 伪目标，执行 `make` 时，会默认会执行 all 伪目标
 .PHONY: all
-all: gen.add-copyright go.format go.lint  go.cover go.build
+all: gen.add-copyright go.format go.lint go.cover go.build
 
-#include
+# ==============================================================================
+# Includes
+
 # 确保 `include common.mk` 位于第一行，common.mk 中定义了一些变量，后面的子 makefile 有依赖
-include scripts/make-rules/common.mk
+include scripts/make-rules/common.mk 
 include scripts/make-rules/tools.mk
 include scripts/make-rules/golang.mk
 include scripts/make-rules/generate.mk
 include scripts/make-rules/image.mk
 
+# ==============================================================================
 # Usage
 
 define USAGE_OPTIONS
@@ -99,11 +103,11 @@ lint: ## 执行静态代码检查.
 
 ##@ test:
 
-.PHONY: test
+.PHONY: test 
 test: ## 执行单元测试.
 	@$(MAKE) go.test
 
-.PHONY: cover
+.PHONY: cover 
 cover: ## 执行单元测试，并校验覆盖率阈值.
 	@$(MAKE) go.cover
 
@@ -130,12 +134,3 @@ tidy: ## 自动添加/移除依赖包.
 help: Makefile ## 打印 Makefile help 信息.
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<TARGETS> <OPTIONS>\033[0m\n\n\033[35mTargets:\033[0m\n"} /^[0-9A-Za-z._-]+:.*?##/ { printf "  \033[36m%-45s\033[0m %s\n", $$1, $$2 } /^\$$\([0-9A-Za-z_-]+\):.*?##/ { gsub("_","-", $$1); printf "  \033[36m%-45s\033[0m %s\n", tolower(substr($$1, 3, length($$1)-7)), $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' Makefile #$(MAKEFILE_LIST)
 	@echo -e "$$USAGE_OPTIONS"
-
-
-
-
-
-
-
-
-

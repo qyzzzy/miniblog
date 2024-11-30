@@ -3,17 +3,15 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/qylearn/miniblog.
 
-package main
+package store
 
-import (
-	"os"
+const defaultLimitValue = 20
 
-	"github.com/qylearn/miniblog/internal/miniblog"
-)
-
-func main() {
-	command := miniblog.NewMiniBlogCommand()
-	if err := command.Execute(); err != nil {
-		os.Exit(1)
+// defaultLimit 设置默认查询记录数.
+func defaultLimit(limit int) int {
+	if limit == 0 {
+		limit = defaultLimitValue
 	}
+
+	return limit
 }

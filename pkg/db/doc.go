@@ -3,17 +3,5 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/qylearn/miniblog.
 
-package main
-
-import (
-	"os"
-
-	"github.com/qylearn/miniblog/internal/miniblog"
-)
-
-func main() {
-	command := miniblog.NewMiniBlogCommand()
-	if err := command.Execute(); err != nil {
-		os.Exit(1)
-	}
-}
+// Package db provide useful functions to create mysql instance.
+package db // import "github.com/qylearn/miniblog/pkg/db"

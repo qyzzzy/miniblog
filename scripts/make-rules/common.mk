@@ -15,7 +15,7 @@ ROOT_PACKAGE=github.com/qylearn/miniblog
 # Protobuf 文件存放路径
 APIROOT=$(ROOT_DIR)/pkg/proto
 
-ifeq ($(origin TMP_DIR),undefined )
+ifeq ($(origin TMP_DIR),undefined)
 TMP_DIR := $(OUTPUT_DIR)/tmp
 $(shell mkdir -p $(TMP_DIR))
 endif

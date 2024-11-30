@@ -47,4 +47,4 @@ install.swagger:
 
 .PHONY: install.addlicense
 install.addlicense:
-	@$(GO) install github.com/marmotedu/addlicense@latest
+	@$(GO) install github.com/qylerarn/addlicense@latest

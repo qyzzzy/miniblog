@@ -3,17 +3,7 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/qylearn/miniblog.
 
-package main
+package errno
 
-import (
-	"os"
-
-	"github.com/qylearn/miniblog/internal/miniblog"
-)
-
-func main() {
-	command := miniblog.NewMiniBlogCommand()
-	if err := command.Execute(); err != nil {
-		os.Exit(1)
-	}
-}
+// ErrPostNotFound 表示未找到博客.
+var ErrPostNotFound = &Errno{HTTP: 404, Code: "ResourceNotFound.PostNotFound", Message: "Post was not found."}

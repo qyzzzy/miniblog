@@ -3,17 +3,5 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/qylearn/miniblog.
 
-package main
-
-import (
-	"os"
-
-	"github.com/qylearn/miniblog/internal/miniblog"
-)
-
-func main() {
-	command := miniblog.NewMiniBlogCommand()
-	if err := command.Execute(); err != nil {
-		os.Exit(1)
-	}
-}
+// Package store defines the storage interface for miniblog.
+package store // import "github.com/marmotedu/miniblog/internal/miniblog/store"

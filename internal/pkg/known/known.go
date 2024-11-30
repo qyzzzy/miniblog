@@ -3,17 +3,12 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/qylearn/miniblog.
 
-package main
+package known
 
-import (
-	"os"
+const (
+	// XRequestIDKey 用来定义 Gin 上下文中的键，代表请求的 uuid.
+	XRequestIDKey = "X-Request-ID"
 
-	"github.com/qylearn/miniblog/internal/miniblog"
+	// XUsernameKey 用来定义 Gin 上下文的键，代表请求的所有者.
+	XUsernameKey = "X-Username"
 )
-
-func main() {
-	command := miniblog.NewMiniBlogCommand()
-	if err := command.Execute(); err != nil {
-		os.Exit(1)
-	}
-}

@@ -1,7 +1,14 @@
+// Copyright 2026 秦云 <qinyun_77@163.com>. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file. The original repo for
+// this file is https://github.com/onexstack/miniblog. The professional
+// version of this repository is https://github.com/onexstack/onex.
+
 package app
 
 import (
 	"github.com/onexstack/miniblog/cmd/mb-apiserver/app/options"
+	"github.com/onexstack/miniblog/pkg/version"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -59,12 +66,16 @@ The project features include:
 	cmd.PersistentFlags().StringVarP(&configFile, "config", "c", filePath(), "Path to the miniblogconfiguration file.")
 	// 将 ServerOptions 中的选项绑定到命令标志
 	opts.AddFlags(cmd.PersistentFlags())
-
+	// 添加 --version 标志
+	version.AddFlags(cmd.PersistentFlags())
 	return cmd
+
 }
 
 // run 是主运行逻辑，负责初始化日志、解析配置、校验选项并启动服务器。
 func run(opts *options.ServerOptions) error {
+	// 如果传入 --version，则打印版本信息并退出
+	version.PrintAndExitIfRequested()
 	// 将 viper 中的配置解析到 opts.
 	if err := viper.Unmarshal(opts); err != nil {
 		return err

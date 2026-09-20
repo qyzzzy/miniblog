@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a0b4a9-d5e2-443e-8039-669ffae9a613" name="Changes" comment="first commit!!" />
+    <list default="true" id="64a0b4a9-d5e2-443e-8039-669ffae9a613" name="Changes" comment="first commit!!">
+      <change afterPath="$PROJECT_DIR$/internal/pkg/errno/code.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/pkg/errno/post.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/pkg/errno/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_output/mb-apiserver" beforeDir="false" afterPath="$PROJECT_DIR$/_output/mb-apiserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.work.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.work.sum" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/s03" />
+        <entry key="$PROJECT_DIR$" value="feature/s04" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,7 +57,7 @@
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/s04&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/s05&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/qy/golang/src/github.com/onexstack/miniblog&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -75,7 +84,7 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.30772993" />
       <window_info anchor="bottom" id="Problems" order="2" />
       <window_info anchor="bottom" id="Problems View" order="3" weight="0.30415863" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.33027077" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.30474806" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.32930368" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="make" show_stripe_button="false" side_tool="true" />

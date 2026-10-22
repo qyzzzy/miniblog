@@ -7,14 +7,11 @@
 package apiserver
 
 import (
-	handler "github.com/onexstack/miniblog/internal/apiserver/handler/grpc"
-	"github.com/onexstack/miniblog/internal/pkg/log"
-	apiv1 "github.com/onexstack/miniblog/pkg/api/apiserver/v1"
-	genericoptions "github.com/onexstack/onexstack/pkg/options"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
-	"net"
+	"github.com/onexstack/miniblog/internal/pkg/server"
 	"time"
+
+	"github.com/onexstack/miniblog/internal/pkg/log"
+	genericoptions "github.com/onexstack/onexstack/pkg/options"
 )
 
 const (
@@ -36,33 +33,57 @@ type Config struct {
 	JWTKey      string
 	Expiration  time.Duration
 	GRPCOptions *genericoptions.GRPCOptions
+	HTTPOptions *genericoptions.InsecureServingOptions
 }
 
 // UnionServer 定义一个联合服务器. 根据 ServerMode 决定要启动的服务器类型.
 type UnionServer struct {
+	srv server.Server
+}
+
+// ServerConfig 包含服务器的核心依赖和配置.
+type ServerConfig struct {
 	cfg *Config
-	srv *grpc.Server
-	lis net.Listener
 }
 
 // NewUnionServer 根据配置创建联合服务器.
 func (cfg *Config) NewUnionServer() (*UnionServer, error) {
-	lis, err := net.Listen("tcp", cfg.GRPCOptions.Addr)
+	// 一些初始化代码
+
+	// 创建服务配置，这些配置可用来创建服务器
+	serverConfig, err := cfg.NewServerConfig()
 	if err != nil {
-		log.Fatalw("Failed to listen", "err", err)
 		return nil, err
 	}
-	// 创建 GRPC Server 实例
-	grpcsrv := grpc.NewServer()
-	apiv1.RegisterMiniBlogServer(grpcsrv, handler.NewHandler())
-	reflection.Register(grpcsrv)
 
-	return &UnionServer{cfg: cfg, srv: grpcsrv, lis: lis}, nil
+	log.Infow("Initializing federation server", "server-mode", cfg.ServerMode)
+
+	// 根据服务模式创建对应的服务实例
+	// 实际企业开发中，可以根据需要只选择一种服务器模式.
+	// 这里为了方便给你展示，通过 cfg.ServerMode 同时支持了 Gin 和 GRPC 2 种服务器模式.
+	// 默认为 gRPC 服务器模式.
+	var srv server.Server
+	switch cfg.ServerMode {
+	case GinServerMode:
+		srv, err = serverConfig.NewGinServer(), nil
+	default:
+		srv, err = serverConfig.NewGRPCServerOr()
+	}
+	if err != nil {
+		return nil, err
+	}
+
+	return &UnionServer{srv: srv}, nil
 }
 
 // Run 运行应用.
 func (s *UnionServer) Run() error {
-	// 打印一条日志，用来提示 GRPC 服务已经起来，方便排障
-	log.Infow("Start to listening the incoming requests on grpc address", "addr", s.cfg.GRPCOptions.Addr)
-	return s.srv.Serve(s.lis)
+	s.srv.RunOrDie()
+	return nil
+}
+
+// NewServerConfig 创建一个 *ServerConfig 实例.
+// 进阶：这里其实可以使用依赖注入的方式，来创建 *ServerConfig.
+func (cfg *Config) NewServerConfig() (*ServerConfig, error) {
+	return &ServerConfig{cfg: cfg}, nil
 }

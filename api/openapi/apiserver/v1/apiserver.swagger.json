@@ -1,13 +1,25 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "apiserver/v1/apiserver.proto",
-    "version": "version not set"
+    "title": "miniblog API",
+    "version": "1.0",
+    "contact": {
+      "name": "小而美的博客项目",
+      "url": "https://github.com/qyzzzy/miniblog",
+      "email": "qinyun_77@163.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "https://github.com/qyzzzy/miniblog/blob/master/LICENSE"
+    }
   },
   "tags": [
     {
       "name": "MiniBlog"
     }
+  ],
+  "schemes": [
+    "https"
   ],
   "consumes": [
     "application/json"
@@ -15,7 +27,31 @@
   "produces": [
     "application/json"
   ],
-  "paths": {},
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "服务健康检查",
+        "operationId": "Healthz",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1HealthzResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "服务治理"
+        ]
+      }
+    }
+  },
   "definitions": {
     "protobufAny": {
       "type": "object",

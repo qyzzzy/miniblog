@@ -32,6 +32,9 @@ GO_LDFLAGS += \
     -X $(VERSION_PACKAGE).gitTreeState=$(GIT_TREE_STATE) \
     -X $(VERSION_PACKAGE).buildDate=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
 
+# 这里把冲突策略设为 warn，避免启动崩溃。
+GO_LDFLAGS += -X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=warn
+
 # ==============================================================================
 # 定义默认目标为 all
 .DEFAULT_GOAL := all

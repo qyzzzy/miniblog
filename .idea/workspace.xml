@@ -5,10 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a0b4a9-d5e2-443e-8039-669ffae9a613" name="Changes" comment="first commit!!">
-      <change afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/healthz.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/miniblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/miniblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_output/mb-apiserver" beforeDir="false" afterPath="$PROJECT_DIR$/_output/mb-apiserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/openapi/apiserver/v1/apiserver.swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/openapi/apiserver/v1/apiserver.swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/mb-apiserver/app/options/options.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/mb-apiserver/app/options/options.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/client/health/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/examples/client/health/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/apiserver/handler/grpc/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/apiserver/handler/grpc/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/apiserver/handler/grpc/healthz.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/apiserver/handler/grpc/healthz.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/apiserver/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/apiserver/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/apiserver_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/example.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/example.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/example.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/example.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/healthz.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/healthz.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/api/apiserver/v1/healthz.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/api/apiserver/v1/healthz.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/protobuf/github.com/onexstack/defaults/defaults.extensions.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/protobuf/github.com/onexstack/defaults/defaults.extensions.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/protobuf/github.com/onexstack/defaults/defaults.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/protobuf/github.com/onexstack/defaults/defaults.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/protobuf/protoc-gen-openapiv2/options/annotations.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/protobuf/protoc-gen-openapiv2/options/annotations.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/third_party/protobuf/protoc-gen-openapiv2/options/openapiv2.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/protobuf/protoc-gen-openapiv2/options/openapiv2.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +71,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "feature/s06",
+    "git-widget-placeholder": "feature/s07",
     "go.import.settings.migrated": "true",
     "last_opened_file_path": "/home/qy/golang/src/github.com/onexstack/miniblog",
     "node.js.detected.package.eslint": "true",
@@ -70,7 +88,7 @@
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="DFA" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17734376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17744479" />
       <window_info id="Commit" order="1" weight="0.17744479" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -78,9 +96,9 @@
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.30474806" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.50027204" visible="true" weight="0.30765504" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.50027204" visible="true" weight="0.3080271" />
       <window_info anchor="bottom" id="Problems" order="2" />
-      <window_info anchor="bottom" id="Problems View" order="3" weight="0.30415863" />
+      <window_info anchor="bottom" id="Problems View" order="3" weight="0.3080271" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.30474806" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.32930368" />
       <window_info anchor="bottom" id="Notifications" order="6" sideWeight="0.49972796" side_tool="true" weight="0.30765504" />
@@ -88,12 +106,12 @@
       <window_info anchor="right" id="make" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Qoder" show_stripe_button="false" />
-      <window_info anchor="right" id="AIAssistant" order="1" weight="0.32994792" />
-      <window_info anchor="right" id="Database" order="2" weight="0.32994792" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
-      <window_info anchor="right" id="Lingma" order="4" show_stripe_button="false" />
-      <window_info anchor="right" id="Qoder CN" order="5" weight="0.32993728" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="0" weight="0.32994792" />
+      <window_info anchor="right" id="Database" order="1" weight="0.32994792" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.25" />
+      <window_info anchor="right" id="Lingma" order="3" show_stripe_button="false" />
+      <window_info anchor="right" id="Qoder CN" order="4" weight="0.32991588" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.25" />
     </layout>
   </component>
   <component name="RecentsManager">

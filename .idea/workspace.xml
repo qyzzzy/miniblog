@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ Copyright 2026 秦云 <qinyun_77@163.com>. All rights reserved.
+ Use of this source code is governed by a MIT style
+ license that can be found in the LICENSE file. The original repo for
+ this file is https://github.com/onexstack/miniblog. The professional
+ version of this repository is https://github.com/onexstack/onex.
+-->
+
 <project version="4">
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a0b4a9-d5e2-443e-8039-669ffae9a613" name="Changes" comment="first commit!!">
-      <change afterPath="$PROJECT_DIR$/internal/apiserver/grpcserver.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/apiserver/handler/http/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/apiserver/handler/http/healthz.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/apiserver/httpserver.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/pkg/server/grpc_server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/pkg/server/http_server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/pkg/server/reverse_proxy_server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/pkg/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_output/mb-apiserver" beforeDir="false" afterPath="$PROJECT_DIR$/_output/mb-apiserver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.work.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.work.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/apiserver/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/apiserver/server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +76,20 @@
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="DFA" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17744479" />
-      <window_info id="Commit" order="1" weight="0.17744479" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17744479" />
+      <window_info active="true" id="Commit" order="1" visible="true" weight="0.17744479" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3080271" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.50027204" visible="true" weight="0.3080271" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.50027204" weight="0.3080271" />
       <window_info anchor="bottom" id="Problems" order="2" />
       <window_info anchor="bottom" id="Problems View" order="3" weight="0.3080271" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.30862403" />
       <window_info anchor="bottom" id="Services" order="5" weight="0.3080271" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.3080271" />
+      <window_info active="true" anchor="bottom" id="Messages" order="6" visible="true" weight="0.30817917" />
       <window_info anchor="bottom" id="Notifications" order="7" sideWeight="0.49972796" side_tool="true" weight="0.30765504" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="make" show_stripe_button="false" side_tool="true" />
@@ -103,7 +99,7 @@
       <window_info anchor="right" id="Database" order="1" weight="0.32994792" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.25" />
       <window_info anchor="right" id="Lingma" order="3" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Qoder CN" order="4" visible="true" weight="0.3420084" />
+      <window_info anchor="right" id="Qoder CN" order="4" weight="0.3420084" />
       <window_info anchor="right" id="Maven" order="5" weight="0.25" />
     </layout>
   </component>
